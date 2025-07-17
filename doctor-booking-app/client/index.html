@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Doctor Booking System</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 600px; margin: 20px auto; }
+    input, select, button { display: block; margin: 10px 0; padding: 8px; width: 100%; }
+    #login-section, #register-section, #booking-section { border: 1px solid #ccc; padding: 20px; margin-bottom: 20px; }
+    #doctors-list option { padding: 5px; }
+    .hidden { display: none; }
+  </style>
+</head>
+<body>
+
+  <h1>Doctor Booking System</h1>
+
+  <section id="register-section">
+    <h2>Register</h2>
+    <input type="text" id="register-name" placeholder="Full Name" />
+    <input type="email" id="register-email" placeholder="Email" />
+    <input type="password" id="register-password" placeholder="Password" />
+    <select id="register-role">
+      <option value="user">User</option>
+      <option value="doctor">Doctor</option>
+    </select>
+    <button id="register-btn">Register</button>
+    <p id="register-msg"></p>
+  </section>
+
+  <section id="login-section">
+    <h2>Login</h2>
+    <input type="email" id="login-email" placeholder="Email" />
+    <input type="password" id="login-password" placeholder="Password" />
+    <button id="login-btn">Login</button>
+    <p id="login-msg"></p>
+  </section>
+
+  <section id="booking-section" class="hidden">
+    <h2>Book an Appointment</h2>
+    <label for="doctors-list">Select Doctor:</label>
+    <select id="doctors-list"></select>
+
+    <input type="date" id="booking-date" />
+    <input type="time" id="booking-time" />
+    <button id="book-btn">Book Appointment</button>
+    <p id="booking-msg"></p>
+
+    <button id="logout-btn">Logout</button>
+  </section>
+
+<script src="main.js"></script>
+</body>
+</html>
+
